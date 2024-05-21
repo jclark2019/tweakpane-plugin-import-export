@@ -22,7 +22,7 @@ export const plugin = createPlugin<BladePlugin<ImportExportBladeParams>>({
   accept(params) {
     const result = parseRecord<ImportExportBladeParams>(params, (p) => ({
       title: p.optional.string,
-      view: p.required.constant('import-export'),
+      view: p.required.constant(id),
       expanded: p.optional.boolean
     }))
 
