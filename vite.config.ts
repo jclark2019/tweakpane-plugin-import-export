@@ -9,7 +9,7 @@ export default defineConfig({
       entry: 'src/index.ts',
       name: 'ImportExportPlugin',
       formats: ['es'],
-      fileName: 'index.js'
+      fileName: 'index'
     },
     rollupOptions: {
       external: ['@tweakpane/core'],

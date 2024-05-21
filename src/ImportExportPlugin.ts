@@ -1,22 +1,22 @@
 import {
+  type FolderBladeParams,
+  type FolderPropsObject,
+  type BladePlugin,
   createPlugin,
-  BladePlugin,
   FolderController,
   FolderApi,
-  FolderBladeParams,
   ValueMap,
-  FolderPropsObject,
   parseRecord
 } from '@tweakpane/core'
 
 interface ImportExportBladeParams extends Omit<FolderBladeParams, 'view' | 'root'> {
-  view: 'import-export'
+  view: typeof id
 }
 
 export const id = 'import-export'
 
 export const plugin = createPlugin<BladePlugin<ImportExportBladeParams>>({
-  id: 'import-export',
+  id,
   type: 'blade',
 
   accept(params) {
